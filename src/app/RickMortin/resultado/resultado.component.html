@@ -1,0 +1,44 @@
+<!-- <div class="row" *ngIf="resultado">
+  <div class="col-md-4 col-sm-6 animate__animated animate__fadeIn" *ngFor="let item of resultado">
+    <div class="card">
+
+     
+      <img [src]="item.image" class="card-img-top">
+
+
+      <div class="card-body">
+        <p class="card-text">
+          {{item.name}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="row" *ngIf="resultadoBusqueda">
+  <div class="col-md-4 col-sm-6 animate__animated animate__fadeIn" *ngFor="let item2 of resultadoBusqueda">
+    <div class="card">
+
+      <!-- se coloca [src] para que angular controle q es una img si se coloca src es un text -->
+      <img [src]="item2.image" class="card-img-top">
+
+
+      <div class="card-body">
+        <p class="card-text">
+          {{item2.name}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row" *ngIf="!resultadoBusqueda">
+  <div class="col-md-6 col-sm-6 animate__animated animate__fadeIn" >
+    
+
+    <div class="p-3 mb-2 bg-danger text-white">LO SENTIMOS NO HEMOS ENCONTRADO RESULTADO DE SU BUSQUEDA</div>
+
+  </div>
+</div>
